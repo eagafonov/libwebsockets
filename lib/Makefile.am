@@ -36,10 +36,10 @@ libwebsockets_la_CFLAGS+= -c \
 libwebsockets_la_LDFLAGS+= -lz
 
 all-local:
-	 ../scripts/kernel-doc -html \
-                libwebsockets.c \
-		parsers.c \
-		client-handshake.c \
-                libwebsockets.h \
+	 $(top_srcdir)/scripts/kernel-doc -html \
+                $(srcdir)/libwebsockets.c \
+		$(srcdir)/parsers.c \
+		$(srcdir)/client-handshake.c \
+                $(srcdir)/libwebsockets.h \
 			> ../libwebsockets-api-doc.html
 
